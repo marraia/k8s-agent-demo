@@ -1,0 +1,13 @@
+diff --git a/k8s/30-deployment.yaml b/k8s/30-deployment.yaml
+index 972892b..6c7e690 100644
+--- a/k8s/30-deployment.yaml
++++ b/k8s/30-deployment.yaml
+@@ -27,7 +27,7 @@ spec:
+             - configMapRef:
+                 name: demo-api-config
+           env:
+-            - name: Pagamentos__ApiKey
++            - name: Pagamentos_ApiKey
+               valueFrom:
+                 secretKeyRef:
+                   name: demo-api-secrets

@@ -1,0 +1,11 @@
+diff --git a/k8s/10-configmap.yaml b/k8s/10-configmap.yaml
+index 08a4c59..0095c9c 100644
+--- a/k8s/10-configmap.yaml
++++ b/k8s/10-configmap.yaml
+@@ -5,5 +5,5 @@ metadata:
+   namespace: demo
+ data:
+   # "__" (dois underlines) é o separador de seções do .NET em variáveis de ambiente
+-  Catalogo__TamanhoMb: "64"
++  Catalogo__TamanhoMb: "200"
+   Catalogo__AquecimentoSegundos: "45"

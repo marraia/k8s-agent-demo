@@ -1,0 +1,16 @@
+@Api_HostAddress = http://localhost:5080
+
+### Informações do serviço
+GET {{Api_HostAddress}}/
+
+### Liveness: responde 200 assim que o processo sobe
+GET {{Api_HostAddress}}/health/live
+
+### Readiness: 503 enquanto o catálogo carrega, 200 depois
+GET {{Api_HostAddress}}/health/ready
+
+### Produto existente
+GET {{Api_HostAddress}}/produtos/42
+
+### Produto inexistente (404)
+GET {{Api_HostAddress}}/produtos/5000

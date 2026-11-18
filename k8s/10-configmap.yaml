@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-api-config
+  namespace: demo
+data:
+  # "__" (dois underlines) é o separador de seções do .NET em variáveis de ambiente
+  Catalogo__TamanhoMb: "64"
+  Catalogo__AquecimentoSegundos: "45"

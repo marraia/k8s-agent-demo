@@ -1,0 +1,16 @@
+diff --git a/k8s/30-deployment.yaml b/k8s/30-deployment.yaml
+index 972892b..0a36366 100644
+--- a/k8s/30-deployment.yaml
++++ b/k8s/30-deployment.yaml
+@@ -38,10 +38,9 @@ spec:
+               memory: 128Mi
+             limits:
+               memory: 256Mi
+-          # Liveness: o processo responde? Nunca depende de banco, cache ou outra API.
+           livenessProbe:
+             httpGet:
+-              path: /health/live
++              path: /health/ready
+               port: http
+             periodSeconds: 10
+             failureThreshold: 3
